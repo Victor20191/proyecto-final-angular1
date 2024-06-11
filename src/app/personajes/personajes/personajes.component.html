@@ -1,0 +1,8 @@
+<mat-list>
+  @for (personaje of personajes.results; track $index) {
+    <mat-list-item>
+        <mat-icon matListItemIcon><img [src]="personaje.image" width="100" height="100" /></mat-icon>
+        <div matListItemTitle>{{ personaje.name }}</div>
+        <div matListItemLine>Status: {{ personaje.status }} -- Especies: {{ personaje.species }}</div>
+      </mat-list-item>
+}

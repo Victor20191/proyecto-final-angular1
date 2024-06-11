@@ -1,0 +1,8 @@
+<mat-list>
+    @for (capitulo of capitulos.results; track $index) {
+      <mat-list-item>
+        <div matListItemTitle>{{ capitulo.episode }}</div>
+        <div matListItemTitle>{{ capitulo.name }}</div>  
+        <!-- <div matListItemLine>Fecha de emisión: {{ capitulo.air_date }} --#Episodio: {{ capitulo.id }}</div> -->
+        </mat-list-item>
+  }
