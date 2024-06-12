@@ -1,9 +1,17 @@
 <app-navbar></app-navbar>
-<mat-list *ngIf="capitulos"></mat-list>
-    @for (capitulo of capitulos.results; track $index) {
-      <mat-list-item>
-        <div matListItemTitle>{{ capitulo.episode }}</div>
-        <div matListItemTitle>{{ capitulo.name }}</div>  
-        <!-- <div matListItemLine>Fecha de emisión: {{ capitulo.air_date }} --#Episodio: {{ capitulo.id }}</div> -->
-        </mat-list-item>
-  }
+<table class="tabla-locaciones" *ngIf="capitulos">
+  <thead>
+    <tr>
+      <th>Nombre capitulo</th>
+      <th>Episodio</th>  
+      <th>Detalles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let capitulo of capitulos.results; let i = index">
+      <td>{{ capitulo.name }}</td>
+      <td>{{ capitulo.episode }}</td>
+      <td>Fecha capitulo: {{ capitulo.air_date }} - Url capitul: {{ capitulo.url }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+.tabla-locaciones {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-locaciones th, .tabla-locaciones td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabla-locaciones th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+}
+
+.tabla-locaciones tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-locaciones tr:hover {
+    background-color: #ddd;
+}

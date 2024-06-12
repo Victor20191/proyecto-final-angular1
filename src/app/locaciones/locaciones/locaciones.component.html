@@ -1,9 +1,17 @@
 <app-navbar></app-navbar>
-<mat-list *ngIf="locaciones">
-    @for (locacion of locaciones.results; track $index) {
-      <mat-list-item>
-        <div matListItemTitle>{{ locacion.name }}</div>
-        <div matListItemTitle>{{ locacion.type }}</div>  
-        <div matListItemLine>Residentes locacion: {{ locacion.id }} --Dimension: {{ locacion.dimension }}</div>
-        </mat-list-item>
-  }
+<table class="tabla-locaciones" *ngIf="locaciones">
+  <thead>
+    <tr>
+      <th>Nombre locacion</th>
+      <th>id</th>  
+      <th>Detalles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let locacion of locaciones.results; let i = index">
+      <td>{{ locacion.name }}</td>
+      <td>{{ locacion.id }}</td>
+      <td>Residentes locación: {{ locacion.id }} - Dimensión: {{ locacion.dimension }}</td>
+    </tr>
+  </tbody>
+</table>
