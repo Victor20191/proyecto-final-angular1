@@ -4,11 +4,12 @@ import { MatListModule } from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from '../../navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-capitulos',
   standalone: true,
-  imports: [CommonModule, MatIconModule,MatListModule,HttpClientModule],
+  imports: [CommonModule, MatIconModule,MatListModule,HttpClientModule,NavbarComponent],
   providers: [RickAndMortyService],
   templateUrl: './capitulos.component.html',
   styleUrl: './capitulos.component.scss'
@@ -20,7 +21,7 @@ export class CapitulosComponent {
   ngOnInit(): void {
     this.rymService.obtenerCapitulos().subscribe(resultado=> {
       this.capitulos = resultado;
-      // console.log(this.capitulos);
+
     });
   }
 

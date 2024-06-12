@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { RickAndMortyService } from '../../services/rick-and-morty.service';
 import { MatListModule } from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import { NavbarComponent } from '../../navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-personajes',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, MatIconModule,MatListModule],
+  imports: [HttpClientModule, CommonModule, MatIconModule,MatListModule,NavbarComponent],
   providers: [RickAndMortyService],
   templateUrl: './personajes.component.html',
   styleUrl: './personajes.component.scss',
@@ -19,7 +20,6 @@ export class PersonajesComponent implements OnInit {
   ngOnInit(): void {
     this.rymService.obtenerPersonajes().subscribe(resultado=> {
       this.personajes = resultado;
-      console.log(this.personajes);
     });
   }
 }

@@ -1,1 +1,9 @@
-<p>locaciones works!</p>
+<app-navbar></app-navbar>
+<mat-list *ngIf="locaciones">
+    @for (locacion of locaciones.results; track $index) {
+      <mat-list-item>
+        <div matListItemTitle>{{ locacion.name }}</div>
+        <div matListItemTitle>{{ locacion.type }}</div>  
+        <div matListItemLine>Residentes locacion: {{ locacion.id }} --Dimension: {{ locacion.dimension }}</div>
+        </mat-list-item>
+  }

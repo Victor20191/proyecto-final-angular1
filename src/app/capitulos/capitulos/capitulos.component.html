@@ -1,4 +1,5 @@
-<mat-list>
+<app-navbar></app-navbar>
+<mat-list *ngIf="capitulos"></mat-list>
     @for (capitulo of capitulos.results; track $index) {
       <mat-list-item>
         <div matListItemTitle>{{ capitulo.episode }}</div>

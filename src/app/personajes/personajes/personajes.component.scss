@@ -1,0 +1,48 @@
+/* Estilo para el contenedor principal de la lista */
+.mat-list {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para cada elemento de la lista */
+  .mat-list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  /* Estilo para el icono de cada elemento de la lista */
+  .mat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+  
+    img {
+      border-radius: 50%;
+      border: 2px solid #ddd;
+    }
+  }
+  
+  /* Estilo para el título de cada elemento de la lista */
+  .mat-list-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Estilo para la línea adicional de información */
+  .mat-list-item-line {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+  }
+  
