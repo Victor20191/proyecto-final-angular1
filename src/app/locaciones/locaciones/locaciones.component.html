@@ -8,10 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let locacion of locaciones.results; let i = index">
+    <tr *ngFor="let locacion of locaciones.results  | paginate: { itemsPerPage: 15, currentPage: p }; let i = index ">
       <td>{{ locacion.name }}</td>
       <td>{{ locacion.id }}</td>
       <td>Residentes locación: {{ locacion.id }} - Dimensión: {{ locacion.dimension }}</td>
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

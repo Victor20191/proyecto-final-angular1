@@ -8,10 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let capitulo of capitulos.results; let i = index">
+    <tr *ngFor="let capitulo of capitulos.results | paginate: { itemsPerPage: 15, currentPage: p }; let i = index">
       <td>{{ capitulo.name }}</td>
       <td>{{ capitulo.episode }}</td>
       <td>Fecha capitulo: {{ capitulo.air_date }} - Url capitul: {{ capitulo.url }}</td>
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
